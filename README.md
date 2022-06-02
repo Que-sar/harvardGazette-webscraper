@@ -1,23 +1,23 @@
-# harvardGazette-webscraper
-University website scraper parallel programming project that gets all news links from harvard Gazette news site synchronised, threadsafe.
+# <h1>harvardGazette-webscraper</h1>
+</h3>University website scraper parallel programming project that gets all news links from harvard Gazette news site synchronised, threadsafe.
 
-It uses BeautifulSoup4 and regex for gathering links, and MongoDB for uploading them to database, while taking commandline arguments with argparse.
+It uses BeautifulSoup4 and regex for gathering links, and MongoDB for uploading them to database, while taking commandline arguments with argparse.</h3>
 
-1. Takes an endpoint, for eg.: "https://news.harvard.edu/gazette/story/2022/"
+<h4>1. Takes an endpoint, for eg.: "https://news.harvard.edu/gazette/story/2022/"</h4>
   - 1 thread only, as its only 1 request, meaning its the peak performance.
   - Gathers the years of logged publishments.
 
-2. Starts specified Link-threads(default is the amount of years there are in publishment)
+<h4>2. Starts specified Link-threads(default is the amount of years there are in publishment)</h4>
   - These links gather all number of pages that contain links of new articles.
   - Semaphore synchronises the next thread to start with task #3.
 
-3. Starts link gathering threads.(default number of threads is the same as in task 2)
+<h4>3. Starts link gathering threads.(default number of threads is the same as in task 2)</h4>
   - Semaphore signals to start.
   - Iterates through pages and gathers links.
   - When 1 page finished, signals with semaphores to start threads with #4.
   - Optimised thread mode: starts threads for each page, minimising IO based task time.
 
-4. Starts link uploading thread to MongoDB server.
+<h4>4. Starts link uploading thread to MongoDB server.</h4>
   - Waits for semaphore to start.
   - Starts uploading.
   - Locks shared variable to make it threadsafe.
