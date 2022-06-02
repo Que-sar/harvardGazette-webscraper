@@ -8,7 +8,7 @@ from pymongo import MongoClient
 
 regs = requests.Session() # For faster requests
     #Ethics and link stored
-headers = {"User-Agent": "This is my web scraping script for a University multithreading project, deadline is 17th of May, almost finished, I hope there is no inconvenience; You can contact me at kroka171@gmail.com and I'll stop immediately if needed!"}
+headers = {"User-Agent": "This is my web scraping script for a University multithreading project, deadline is 17th of May, almost finished, I hope there is no inconvenience; You can contact me at kroka171@gmail.com."}
 urlToUse = "https://news.harvard.edu/gazette/story/"
 
 #Queues used, also providing thread safe lookups, as they are inherently wrapped in locks by design
