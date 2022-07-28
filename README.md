@@ -22,7 +22,7 @@ It uses BeautifulSoup4 and regex for gathering links, and MongoDB for uploading 
   - Starts uploading.<br>
   - Locks shared variable to make it threadsafe.<br>
 
-<h5>Time with optimised threading:</h5>
+<h5>Time with optimised threading algorithms:</h5>
   Average: 87.47159079138382 seconds <br>
   Median: 87.05949537330392 seconds<br>
   
