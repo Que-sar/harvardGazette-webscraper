@@ -98,7 +98,7 @@ sharedDict = {"_id": 1,
 uniqueIndex = 1
 
 if int(args.uploadThreads) > 0: # No small connection overhead cost if no upload was needed
-    client = MongoClient("mongodb+srv://CMP202:CMP202@cluster0.obaei.mongodb.net/?retryWrites=true&w=majority")
+    client = MongoClient("mongodb+srv://CMP205:CMP205@cluster0.obaei.mongodb.net/?retryWrites=true&w=majority") # Not actual login creds(fake)
     db = client.get_database("sites")
     records = db.websites
     records.delete_many({}) # Deletes, to avoid E11000 error when running it again
