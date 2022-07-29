@@ -31,4 +31,37 @@ It uses BeautifulSoup4 and regex for gathering links, and MongoDB for uploading 
 <h5>Time without multithreading:</h5>
   Average: 1448.121027455036 seconds <br>
   Median: 1449.7646775171445 seconds<br>
+  
+  ## Requirements
+  
+  The running of the program requires the:
+- argparser module, pip3 install argparse # parsing command line arguments
+- the pymongo module, pip3 install pymongo #connecting to database
+- regular expressions,
+- bs4(beautiful soup), pip3 install beautifulsoup4 #parsing HTML
+- queue,
+- requests,
+- date,
+- time,
+- threading modules.
+
+## Usage
+
+with pyinstaller the main.py was made executable(main). This is located inside the main zip folder or the dist folder, tested and is working properly with the flags too.
+
+example: ./main -y 1 -p 1 -u 1 
+Using 1 thread for every function
+More below:
+        
+if used with python, the main.py and download.py need to be in the same folder, or can be just copy pasted if needed.
+
+example useage:
+python3 main.py -y 10 -u 17 -p 23 -o y
+-y flag for amount of yearThreads
+-u for amount of uploadThreads
+-p for amount of pageThreads
+-o for optimised page scraping strategy(WARNING) this creates a lot of threads
+
+with the help of the -h flag, this is all displayed
+
 
