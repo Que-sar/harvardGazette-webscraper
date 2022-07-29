@@ -1,6 +1,8 @@
 # <h1>harvardGazette-webscraper</h1>
 </h3>University website scraper parallel programming project that gets all news links from harvard Gazette news site synchronised, in a threadsafe manner.
 
+Presentation can be found in the repository.(5 mins read)
+
 It uses BeautifulSoup4 and regex for gathering links, and MongoDB for uploading them to database, while taking commandline arguments with argparse.</h3>
 
 <h4>1. Takes an endpoint, for eg.: "https://news.harvard.edu/gazette/story/2022/"</h4>
